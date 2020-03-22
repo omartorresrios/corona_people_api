@@ -9,6 +9,18 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
+
+gem 'devise'
+gem 'jwt', '~> 1.5', '>= 1.5.4'
+gem 'fast_jsonapi'
+
+# image uploads to Amazon S3
+gem 'carrierwave', '~> 0.11.2'
+gem 'fog', '~> 1.38'
+
+# image resizing
+gem 'mini_magick'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
