@@ -10,32 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_22_020521) do
+ActiveRecord::Schema.define(version: 2020_03_25_013110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: :cascade do |t|
-    t.string "name", default: "", null: false
-    t.string "email", default: "", null: false
-    t.string "avatar", default: "", null: false
-    t.integer "dni", default: 0, null: false
-    t.string "district", default: "", null: false
-    t.string "infraction", default: "", null: false
-    t.boolean "isAdmin", default: false, null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet "current_sign_in_ip"
-    t.inet "last_sign_in_ip"
+  create_table "citizens", force: :cascade do |t|
+    t.string "name"
+    t.string "avatar"
+    t.string "dni"
+    t.string "district"
+    t.string "infraction"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name", default: ""
+    t.string "email", default: ""
+    t.string "avatar", default: ""
+    t.integer "dni", default: 0
+    t.string "district", default: ""
+    t.string "infraction", default: ""
+    t.boolean "is_admin", default: false
+    t.string "encrypted_password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
 end

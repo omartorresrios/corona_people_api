@@ -2,20 +2,14 @@
 
 one:
   name: MyString
-  email: MyString
   avatar: MyString
-  dni: 1
+  dni: MyString
   district: MyString
   infraction: MyString
-  is_admin: false
-  encrypted_password: MyString
 
 two:
   name: MyString
-  email: MyString
   avatar: MyString
-  dni: 1
+  dni: MyString
   district: MyString
   infraction: MyString
-  is_admin: false
-  encrypted_password: MyString
